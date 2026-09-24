@@ -1,0 +1,24 @@
+# ===== NÃO SUBIR NO GITHUB =====
+
+# Vídeo de gravação de tela (82 MB — estouraria o repositório)
+*.mp4
+*.mov
+
+# Artefatos de teste / screenshots
+test-results/
+
+# Site antigo (backup local, versão guardada)
+_backup_antes_da_reescrita/
+
+# Arquivos órfãos: só o site antigo usa (o novo usa "Logo Jhonnytur recortada.png")
+internal.css
+Logo Jhonnytur alta.png
+Logo Jhonnytur.png
+Logo Jhonnytur recortada.original.png
+logo.jpeg
+sol-mar.svg
+whatsapp.svg
+
+# Sistema
+Thumbs.db
+.DS_Store

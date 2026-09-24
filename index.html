@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Jhonnytur — excursões de ônibus para destinos inesquecíveis. Grupos pequenos, ônibus executivo e monitoria do embarque ao desembarque.">
+	<meta name="theme-color" content="#0b2447">
+	<title>Jhonnytur | Viagens de ônibus que viram histórias</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="animations.css">
+	<script src="animations.js" defer></script>
+</head>
+<body>
+	<div class="page-wipe is-out" aria-hidden="true"></div>
+	<div class="progress" aria-hidden="true"></div>
+
+	<header class="site-header">
+		<div class="topbar">
+			<div class="wrap topbar-inner">
+				<span><i class="dot-live"></i> Saídas toda semana • vagas abertas para as férias de julho</span>
+				<div class="topbar-links">
+					<a href="https://wa.me/5500000000000" target="_blank" rel="noopener">Atendimento pelo WhatsApp</a>
+					<a href="https://instagram.com/jhon_nytur" target="_blank" rel="noopener">Instagram @jhon_nytur</a>
+				</div>
+			</div>
+		</div>
+		<div class="wrap nav">
+			<a class="brand" href="index.html" aria-label="Jhonnytur — início">
+				<span class="brand-chip"><img src="Logo Jhonnytur recortada.png" alt="Jhonnytur"></span>
+				<span class="brand-text"><strong>JHONYTUR</strong><small>Viagens</small></span>
+			</a>
+			<nav class="nav-links" id="navLinks" aria-label="Menu principal">
+				<a href="index.html">Início</a>
+				<a href="viagens.html">Viagens</a>
+				<a href="experiencia.html">A experiência</a>
+				<a href="videos.html">Vídeos</a>
+				<a href="contato.html">Contato</a>
+				<a class="btn nav-drawer-cta" href="contato.html">Reservar agora <span class="arr">→</span></a>
+			</nav>
+			<div class="nav-right">
+				<a class="btn btn--sm nav-cta" href="contato.html">Reservar agora <span class="arr">→</span></a>
+				<button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+			</div>
+		</div>
+	</header>
+	<div class="nav-backdrop"></div>
+
+	<main>
+		<!-- ================================================================ HERÓI -->
+		<section class="hero hero--home" id="inicio">
+			<div class="hero-media">
+				<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1900&q=85" alt="Estrada atravessando uma paisagem de montanhas">
+			</div>
+			<div class="wrap hero-content">
+				<span class="eyebrow" style="color:var(--gold-2)">Excursões de ônibus • Em grupo</span>
+				<h1 class="split-words">O Brasil é imenso. <em class="accent">Nós levamos você.</em></h1>
+				<p class="hero-copy">Destinos que valem a estrada: ônibus executivo, hotéis selecionados e um monitor cuidando de cada detalhe — do embarque ao desembarque.</p>
+				<div class="hero-actions">
+					<a class="btn" href="viagens.html">Ver viagens <span class="arr">→</span></a>
+					<a class="btn btn--ghost" href="#como">Como funciona</a>
+				</div>
+				<div class="hero-facts">
+					<div class="fact"><strong>4,9 ★</strong><span>Avaliação dos passageiros</span></div>
+					<div class="fact"><strong>42</strong><span>Destinos no catálogo</span></div>
+					<div class="fact"><strong>12x</strong><span>Sem juros no cartão</span></div>
+				</div>
+			</div>
+			<div class="hero-scroll" aria-hidden="true"><span>Descubra</span><i></i></div>
+		</section>
+
+		<!-- =========================================================== PLANEJADOR -->
+		<div class="wrap planner">
+			<form action="viagens.html" method="get">
+				<div class="field">
+					<label for="origem">🚌 De onde sai</label>
+					<select id="origem" name="origem">
+						<option>São Paulo — Tietê</option>
+						<option>Rio de Janeiro — Novo Rio</option>
+						<option>Belo Horizonte — Rodoviária</option>
+						<option>Vitória — Terminal de Rodoviário</option>
+						<option>Curitiba — Boqueirão</option>
+					</select>
+				</div>
+				<div class="field">
+					<label for="destino">📍 Para onde</label>
+					<select id="destino" name="destino">
+						<option value="">Escolha o destino</option>
+						<option>Foz do Iguaçu</option>
+						<option>Gramado &amp; Canela</option>
+						<option>Praia do Capão</option>
+						<option>Bento Gonçalves &amp; Garibaldi</option>
+						<option>Praia do Forte</option>
+						<option>Chapada dos Veadeiros</option>
+						<option>Ouro Preto &amp; Tiradentes</option>
+						<option>Serra Catarinense</option>
+						<option>Serra do Cipó</option>
+					</select>
+				</div>
+				<div class="field">
+					<label for="quando">🗓️ Quando</label>
+					<select id="quando" name="quando">
+						<option>Próximas saídas</option>
+						<option>Este mês</option>
+						<option>Férias de julho</option>
+						<option>Feriados</option>
+						<option>Datas flexíveis</option>
+					</select>
+				</div>
+				<button class="btn" type="submit">Encontrar viagem <span class="arr">→</span></button>
+			</form>
+		</div>
+
+		<!-- ============================================================== MARQUEE -->
+		<div class="strip" aria-hidden="true" style="margin-top:clamp(48px,6vw,80px)">
+			<div class="strip-track">
+				<div class="strip-group">
+					<span>Foz do Iguaçu</span><i>🚌</i><span>Gramado &amp; Canela</span><i>🚌</i><span>Praia do Capão</span><i>🚌</i><span>Serra Gaúcha</span><i>🚌</i><span>Chapada dos Veadeiros</span><i>🚌</i><span>Ouro Preto</span><i>🚌</i><span>Serra do Cipó</span><i>🚌</i><span>Praia do Forte</span><i>🚌</i>
+				</div>
+				<div class="strip-group">
+					<span>Foz do Iguaçu</span><i>🚌</i><span>Gramado &amp; Canela</span><i>🚌</i><span>Praia do Capão</span><i>🚌</i><span>Serra Gaúcha</span><i>🚌</i><span>Chapada dos Veadeiros</span><i>🚌</i><span>Ouro Preto</span><i>🚌</i><span>Serra do Cipó</span><i>🚌</i><span>Praia do Forte</span><i>🚌</i>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============================================================= VIAGENS -->
+		<section class="section section--white" id="viagens">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div>
+						<span class="eyebrow">Viagens em destaque</span>
+						<h2>Talvez o seu próximo destino <em class="accent">esteja aqui.</em></h2>
+					</div>
+					<p>Roteiros feitos para rodoviário: saídas noturnas, paradas programadas e dias cheios de passeio. Veja o roteiro completo de cada viagem.</p>
+				</div>
+
+				<div class="trip-grid reveal-group">
+					<article class="trip-card" data-cat="natureza" data-title="Foz do Iguaçu"
+						data-img="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+						data-meta="3 dias e 2 noites • Saída de São Paulo"
+						data-desc="As cataratas brasileiras e argentinas, o Parque das Aves e o Marco das Três Fronteiras — com saída noturna de ônibus e dois dias completos de passeio."
+						data-price="R$ 899"
+						data-itin="Dia 1 — Embarque às 20h na rodoviária, viagem noturna com paradas programadas.||Dia 2 — Parque das Aves, Cataratas do lado brasileiro e show das águas ao anoitecer.||Dia 3 — Cataratas do lado argentino,Marco das Três Fronteiras e retorno à noite."
+						data-incl="Ônibus executivo com ar-condicionado||Hospedagem com café da manhã||Monitoria durante toda a viagem||Passeios com guia local">
+						<div class="trip-media">
+							<img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=900&q=85" alt="Cachoeira em meio à mata" loading="lazy">
+							<span class="trip-tag">Mais procurada</span>
+							<button class="fav" type="button" data-fav="foz-do-iguacu" data-name="Foz do Iguaçu" aria-pressed="false" aria-label="Salvar Foz do Iguaçu nos favoritos"><span aria-hidden="true">♥</span></button>
+							<span class="trip-route"><b>🚌</b><i></i>São Paulo → Foz</span>
+						</div>
+						<div class="trip-body">
+							<span class="eyebrow">Natureza &amp; aventura</span>
+							<h3>Foz do Iguaçu</h3>
+							<p class="trip-desc">Águas que não cabem numa foto e uma estrada que já vale a viagem.</p>
+							<div class="trip-meta"><span>◷ <b>3 dias</b></span><span>👥 Em grupo</span><span>💺 Executivo</span></div>
+							<div class="trip-foot">
+								<div class="price"><small>a partir de</small><strong>R$ 899</strong></div>
+								<button class="btn-detail" type="button">Ver roteiro</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="trip-card" data-cat="serra" data-title="Gramado &amp; Canela"
+						data-img="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+						data-meta="4 dias e 3 noites • Saída de São Paulo"
+						data-desc="O clima europeu da Serra Gaúcha em quatro dias: Lago Negro, Mini Mundo, Monte Radda e um roteiro de chocolate e vinho que termina sempre com fondue."
+						data-price="R$ 1.190"
+						data-itin="Dia 1 — Saída noturna de ônibus com poltronas reclináveis.||Dia 2 — Gramado: Lago Negro, Mini Mundo e centro histórico.||Dia 3 — Canela: Cascata do Caracol, Vale dos Vinhedos e Garibaldi.||Dia 4 — Manhã livre para compras e retorno à tarde."
+						data-incl="Ônibus executivo com ar-condicionado||3 noites em hotel quatro estrelas||Café da manhã e 2 jantares||Monitoria e guia local">
+						<div class="trip-media">
+							<img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=85" alt="Montanhas cobertas por neblina" loading="lazy">
+							<span class="trip-tag trip-tag--soft">Serra gaúcha</span>
+							<button class="fav" type="button" data-fav="gramado-canela" data-name="Gramado & Canela" aria-pressed="false" aria-label="Salvar Gramado e Canela nos favoritos"><span aria-hidden="true">♥</span></button>
+							<span class="trip-route"><b>🚌</b><i></i>São Paulo → Gramado</span>
+						</div>
+						<div class="trip-body">
+							<span class="eyebrow">Serra &amp; charme</span>
+							<h3>Gramado &amp; Canela</h3>
+							<p class="trip-desc">Quatro dias entre neblina, chocolate e vinícolas na serra mais aconchegante do país.</p>
+							<div class="trip-meta"><span>◷ <b>4 dias</b></span><span>👥 Em grupo</span><span>💺 Executivo</span></div>
+							<div class="trip-foot">
+								<div class="price"><small>a partir de</small><strong>R$ 1.190</strong></div>
+								<button class="btn-detail" type="button">Ver roteiro</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="trip-card" data-cat="praia" data-title="Praia do Capão"
+						data-img="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+						data-meta="4 dias e 3 noites • Saída de São Paulo"
+						data-desc="Mar, piscina e jantar à beira da praia. Hospedagem com pensão completa, passeio de barco e tempo livre para aproveitar cada pôr do sol."
+						data-price="R$ 1.290"
+						data-itin="Dia 1 — Saída à noite, viagem com paradas e lanche a bordo.||Dia 2 — Chegada, check-in e tarde livre na praia.||Dia 3 — Passeio de barco com mergulho e jantar de frutos do mar.||Dia 4 — Manhã livre, almoço e retorno."
+						data-incl="Ônibus executivo com ar-condicionado||Pensão completa em hotel praia||Passeio de barco||Monitoria a bordo">
+						<div class="trip-media">
+							<img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=900&q=85" alt="Resort à beira-mar com piscina" loading="lazy">
+							<span class="trip-tag">Praia &amp; descanso</span>
+							<button class="fav" type="button" data-fav="praia-capao" data-name="Praia do Capão" aria-pressed="false" aria-label="Salvar Praia do Capão nos favoritos"><span aria-hidden="true">♥</span></button>
+							<span class="trip-route"><b>🚌</b><i></i>São Paulo → Capão</span>
+						</div>
+						<div class="trip-body">
+							<span class="eyebrow">Descanso &amp; lazer</span>
+							<h3>Praia do Capão</h3>
+							<p class="trip-desc">Quatro dias de mar, piscina e jantar com os pés na areia.</p>
+							<div class="trip-meta"><span>◷ <b>4 dias</b></span><span>👥 Em grupo</span><span>💺 Executivo</span></div>
+							<div class="trip-foot">
+								<div class="price"><small>a partir de</small><strong>R$ 1.290</strong></div>
+								<button class="btn-detail" type="button">Ver roteiro</button>
+							</div>
+						</div>
+					</article>
+				</div>
+
+				<a class="btn btn--line" href="viagens.html" style="margin-top:34px">Ver todas as viagens <span class="arr">→</span></a>
+			</div>
+		</section>
+
+		<!-- ============================================================ POR QUE -->
+		<section class="section">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div>
+						<span class="eyebrow">Por que viajar conosco</span>
+						<h2>Conforto na estrada, <em class="accent">cuidado no destino.</em></h2>
+					</div>
+					<p>Cada trecho é pensado para você dormir bem, chegar descansado e aproveitar todos os dias de passeio.</p>
+				</div>
+				<div class="feature-grid reveal-group">
+					<div class="feature"><div class="feature-ico">🚌</div><h3>Ônibus executivo</h3><p>Poltronas reclináveis, ar-condicionado, banheiro a bordo, tomadas e Wi-Fi nos principais trechos.</p></div>
+					<div class="feature"><div class="feature-ico">🛣️</div><h3>Estrada planejada</h3><p>Saídas noturnas e paradas programadas para você dormir durante o trajeto e acordar já no destino.</p></div>
+					<div class="feature"><div class="feature-ico">🧑‍✈️</div><h3>Monitor a bordo</h3><p>Um acompanhante do começo ao fim: resolve imprevistos, organiza os horários e cuida do grupo.</p></div>
+					<div class="feature"><div class="feature-ico">🛏️</div><h3>Hotéis selecionados</h3><p>Hospedagem testada pela equipe, sempre bem localizada e com café da manhã incluso.</p></div>
+					<div class="feature"><div class="feature-ico">💳</div><h3>Parcelamento em 12x</h3><p>Sem juros no cartão e sinal mínimo para garantir sua vaga na próxima saída.</p></div>
+					<div class="feature"><div class="feature-ico">💬</div><h3>Antes, durante e depois</h3><p>Atendimento pelo WhatsApp em todos os dias da viagem — e depois para planejar a próxima.</p></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================================================== COMO FUNCIONA -->
+		<section class="section section--navy" id="como">
+			<div class="wrap route">
+				<div class="section-head reveal">
+					<div>
+						<span class="eyebrow">Como funciona</span>
+						<h2>Da escolha ao desembarque, <em class="accent">tudo é simples.</em></h2>
+					</div>
+					<p>Quatro passos e a estrada é nossa. Acompanhe o caminho da sua próxima viagem.</p>
+				</div>
+
+				<div class="route-road" aria-hidden="true">
+					<span class="road-line"></span>
+					<span class="road-fill"></span>
+					<span class="road-bus"><span>🚌</span></span>
+					<span class="road-end road-end--start">Embarque</span>
+					<span class="road-end road-end--end">Chegada</span>
+				</div>
+
+				<div class="route-steps reveal-group">
+					<div class="route-step"><b>01</b><h3>Escolha o destino</h3><p>Navegue pelo catálogo, veja o roteiro dia a dia e encontre a saída que combina com a sua agenda.</p></div>
+					<div class="route-step"><b>02</b><h3>Garanta sua vaga</h3><p>Fale com a gente pelo WhatsApp, pague o sinal e receba a confirmação com todos os detalhes.</p></div>
+					<div class="route-step"><b>03</b><h3>Embarque e relaxe</h3><p>Chegue na rodoviária, deixe as malas no porão e durma o caminho inteiro na poltrona reclinável.</p></div>
+					<div class="route-step"><b>04</b><h3>Viva o destino</h3><p>Passeios com guia, horários combinados e liberdade para aproveitar cada dia do roteiro.</p></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================ NÚMEROS -->
+		<section class="section section--tight section--sky">
+			<div class="wrap">
+				<div class="stats reveal-group">
+					<div class="stat"><strong data-count="15" data-suffix="+">0</strong><span>Anos de estrada</span></div>
+					<div class="stat"><strong data-count="42">0</strong><span>Destinos no catálogo</span></div>
+					<div class="stat"><strong data-count="18500" data-suffix="+">0</strong><span>Passageiros felizes</span></div>
+					<div class="stat"><strong data-count="98" data-suffix="%">0</strong><span>Voltariam conosco</span></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========================================================= MANIFESTO -->
+		<section class="section">
+			<div class="wrap manifesto-grid">
+				<div class="manifesto-visual reveal-x">
+					<div class="frame frame--a"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=85" alt="Lago azul cercado por montanhas" loading="lazy"></div>
+					<div class="frame frame--b"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=700&q=85" alt="Lago cercado por montanhas" loading="lazy"></div>
+					<div class="frame--badge"><strong>100%</strong><span>Em grupo, com monitor</span></div>
+				</div>
+				<div class="manifesto-copy reveal">
+					<span class="eyebrow">Nossa filosofia</span>
+					<h2>Viagem é bom. <em class="accent">Viajar bem é melhor.</em></h2>
+					<p>Cuidamos de cada detalhe — horários, bagagem, quarto e passeios — para que a sua única preocupação seja aproveitar o caminho.</p>
+					<div class="values">
+						<div class="value"><b>✨ Melhor preço</b><span>Igualamos qualquer oferta e damos 5% de desconto.</span></div>
+						<div class="value"><b>💳 Parcele em 12x</b><span>Sem juros no cartão de crédito.</span></div>
+						<div class="value"><b>🔒 Compra segura</b><span>Reserva confirmada e comprovada por escrito.</span></div>
+						<div class="value"><b>🎧 Suporte todos os dias</b><span>Equipe disponível antes, durante e depois.</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================ OFERTAS -->
+		<section class="section section--navy" id="ofertas">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div>
+						<span class="eyebrow">Ofertas da semana</span>
+						<h2>Descontos que <em class="accent">valem a estrada.</em></h2>
+					</div>
+					<p>Pacotes completos com preço fechado. As vagas são limitadas e a reserva garante o valor da tabela.</p>
+				</div>
+				<div class="offer-grid reveal-group">
+					<article class="offer-card" data-cat="praia" data-title="Praia do Forte"
+						data-img="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+						data-meta="5 dias e 4 noites • Saída de São Paulo"
+						data-desc="Bahia de verdade: mar calmo, tartarugas na praia e um roteiro leve com tempo livre todos os dias."
+						data-price="R$ 1.380"
+						data-itin="Dia 1 — Saída noturna de São Paulo.||Dia 2 — Chegada, praia e pôr do sol no pier.||Dia 3 — Praia do Forte, Projeto TAMAR e Forte São Miguel.||Dia 4 — Dia livre na praia e passeio de barco.||Dia 5 — Retorno à tarde."
+						data-incl="Ônibus executivo com ar-condicionado||4 noites com café da manhã||Passeios com guia||Monitoria a bordo">
+						<div class="offer-media">
+							<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85" alt="Praia de águas cristalinas" loading="lazy">
+							<span class="offer-vagas">6 vagas restantes</span>
+							<span class="offer-price"><strong>R$ 1.380</strong><span>por pessoa</span></span>
+						</div>
+						<div class="offer-body">
+							<span class="eyebrow">Praia &amp; descanso</span>
+							<h3>Praia do Forte</h3>
+							<p>Cinco dias entre mar calmo, tartarugas e um roteiro leve na Bahia — com saída noturna e hotel na beira da praia.</p>
+							<div class="offer-foot">
+								<div class="price"><small>de R$ 1.690 por</small><strong>R$ 1.380</strong></div>
+								<button class="btn-detail btn-detail--dark" type="button">Ver roteiro</button>
+							</div>
+						</div>
+					</article>
+
+					<article class="offer-card" data-cat="serra" data-title="Bento Gonçalves &amp; Garibaldi"
+						data-img="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+						data-meta="3 dias e 2 noites • Saída de São Paulo"
+						data-desc="Capital nacional do vinho: trenzinho, vinícolas, queijos artesanais e almoço com vinhos na encosta da serra."
+						data-price="R$ 990"
+						data-itin="Dia 1 — Saída noturna e viagem com paradas programadas.||Dia 2 — Trenzinho do Vale, Vinícola e almoço com produtos da região.||Dia 3 — Garibaldi, centro histórico e retorno à tarde."
+						data-incl="Ônibus executivo com ar-condicionado||2 noites com café da manhã||Ingresso do trenzinho||Monitoria a bordo">
+						<div class="offer-media">
+							<img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=85" alt="Pinheiros dourados ao pôr do sol" loading="lazy">
+							<span class="offer-vagas">8 vagas restantes</span>
+							<span class="offer-price"><strong>R$ 990</strong><span>por pessoa</span></span>
+						</div>
+						<div class="offer-body">
+							<span class="eyebrow">Serra &amp; vinho</span>
+							<h3>Bento Gonçalves &amp; Garibaldi</h3>
+							<p>Três dias na capital do vinho brasileiro: trenzinho do vale, vinícolas e um almoço que combina com a vista.</p>
+							<div class="offer-foot">
+								<div class="price"><small>de R$ 1.190 por</small><strong>R$ 990</strong></div>
+								<button class="btn-detail btn-detail--dark" type="button">Ver roteiro</button>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- ======================================================= DEPOIMENTOS -->
+		<section class="section section--white">
+			<div class="wrap">
+				<div class="section-head reveal" style="justify-content:center;text-align:center">
+					<div style="margin-inline:auto">
+						<span class="eyebrow" style="justify-content:center">Quem já viajou</span>
+						<h2 style="max-width:none">Histórias <em class="accent">de bordo.</em></h2>
+					</div>
+				</div>
+				<div class="quotes reveal" data-slider>
+					<div class="quote-viewport">
+						<div class="quote-track">
+							<figure class="quote-slide">
+								<div class="stars" aria-label="5 de 5">★★★★★</div>
+								<blockquote>“Saí de São Paulo às 22h e acordei em Foz com o café pronto. O monitor resolveu tudo — eu só fui viajar e dormir.”</blockquote>
+								<figcaption><span class="avatar">MR</span><span><b>Mariana Ribeiro</b> • Foz do Iguaçu</span></figcaption>
+							</figure>
+							<figure class="quote-slide">
+								<div class="stars" aria-label="5 de 5">★★★★★</div>
+								<blockquote>“Primeira excursão de ônibus da minha vida e não foi a última. O ônibus é confortável de verdade e o grupo era pequeno.”</blockquote>
+								<figcaption><span class="avatar">CS</span><span><b>Carlos Souza</b> • Gramado &amp; Canela</span></figcaption>
+							</figure>
+							<figure class="quote-slide">
+								<div class="stars" aria-label="5 de 5">★★★★★</div>
+								<blockquote>“Levei minha mãe e a atenção com ela foi imensa. Do embarque até o hotel, tudo combinado no horário.”</blockquote>
+								<figcaption><span class="avatar">JA</span><span><b>Juliana Alves</b> • Praia do Capão</span></figcaption>
+							</figure>
+						</div>
+					</div>
+					<div class="quote-nav">
+						<button class="qbtn" type="button" data-prev aria-label="Depoimento anterior">←</button>
+						<div class="qdots"></div>
+						<button class="qbtn" type="button" data-next aria-label="Próximo depoimento">→</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- =============================================================== FAQ -->
+		<section class="section">
+			<div class="wrap">
+				<div class="section-head reveal" style="justify-content:center;text-align:center">
+					<div style="margin-inline:auto">
+						<span class="eyebrow" style="justify-content:center">Dúvidas frequentes</span>
+						<h2 style="max-width:none">Antes de <em class="accent">fazer as malas.</em></h2>
+					</div>
+				</div>
+				<div class="faq reveal-group">
+					<div class="faq-item">
+						<button class="faq-q" type="button" aria-expanded="false">Como funciona o embarque e o horário de saída? <i>+</i></button>
+						<div class="faq-a"><div><p>O embarque é na rodoviária da sua cidade, com 40 minutos de antecedência. A maioria das saídas é à noite, para você dormir no trajeto e chegar descansado ao destino. Você recebe a confirmação com endereço, horário e telefone do monitor por WhatsApp.</p></div></div>
+					</div>
+					<div class="faq-item">
+						<button class="faq-q" type="button" aria-expanded="false">O ônibus é confortável para viagens longas? <i>+</i></button>
+						<div class="faq-a"><div><p>Trabalhamos com ônibus executivo: poltronas reclináveis, ar-condicionado, banheiro, tomadas e porão amplo para as malas. As paradas são programadas a cada 3 horas.</p></div></div>
+					</div>
+					<div class="faq-item">
+						<button class="faq-q" type="button" aria-expanded="false">Posso parcelar a viagem? <i>+</i></button>
+						<div class="faq-a"><div><p>Sim. São até 12 vezes sem juros no cartão de crédito, com um sinal mínimo para reservar a vaga. Também aceitamos Pix e dinheiro com desconto adicional.</p></div></div>
+					</div>
+					<div class="faq-item">
+						<button class="faq-q" type="button" aria-expanded="false">As refeições e os passeios estão inclusos? <i>+</i></button>
+						<div class="faq-a"><div><p>Cada roteiro informa exatamente o que está incluso — geralmente hospedagem com café da manhã, passeios com guia e lanche a bordo no primeiro dia. Almoços e jantares livres ficam por sua conta para você escolher onde comer.</p></div></div>
+					</div>
+					<div class="faq-item">
+						<button class="faq-q" type="button" aria-expanded="false">Posso viajar sozinho ou levar minha família? <i>+</i></button>
+						<div class="faq-a"><div><p>Os dois! Metade do nosso público viaja solo e a outra metade vem em família ou em grupo de amigos. Quartos duplos, triplos e quadruplos são organizados pela equipe, e sempre há acompanhante a bordo.</p></div></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- =============================================================== CTA -->
+		<section class="cta-band">
+			<div class="wrap cta-inner">
+				<div>
+					<h2>Receba as <em class="accent">saídas da semana</em> primeiro.</h2>
+					<p>Promoções e novas datas direto no seu e-mail. Sem spam, só viagem.</p>
+				</div>
+				<form class="cta-form" novalidate>
+					<input type="email" name="email" placeholder="Seu melhor e-mail" aria-label="Seu melhor e-mail" required>
+					<button class="btn" type="submit">Inscrever-se</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="wrap">
+			<div class="footer-main">
+				<div class="footer-brand">
+					<a class="brand" href="index.html">
+						<span class="brand-chip"><img src="Logo Jhonnytur recortada.png" alt="Jhonnytur"></span>
+						<span class="brand-text"><strong>JHONYTUR</strong><small>Viagens</small></span>
+					</a>
+					<p>Viagens de ônibus que viram histórias para contar.</p>
+					<div class="footer-social">
+						<a href="https://instagram.com/jhon_nytur" target="_blank" rel="noopener" aria-label="Instagram">
+							<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+						</a>
+						<a href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+							<svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.5 4.1 1.5 5.9L.1 24l6.4-1.7a12 12 0 0 0 5.6 1.4h.1c6.6 0 11.8-5.3 11.8-11.9 0-3.2-1.3-6.1-3.5-8.3ZM12.2 21.7h-.1c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.6 4.7Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.9-1.7.1-.2 0-.4 0-.5 0-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.7 0 1.6 1.1 3.1 1.3 3.3.2.2 2.2 3.4 5.4 4.7 2 .9 2.8.9 3.8.8.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/></svg>
+						</a>
+					</div>
+				</div>
+				<div class="footer-col">
+					<h4>Navegar</h4>
+					<ul>
+						<li><a href="index.html">Início</a></li>
+						<li><a href="viagens.html">Viagens</a></li>
+						<li><a href="experiencia.html">A experiência</a></li>
+						<li><a href="videos.html">Vídeos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Destinos</h4>
+					<ul>
+						<li><a href="viagens.html">Foz do Iguaçu</a></li>
+						<li><a href="viagens.html">Gramado &amp; Canela</a></li>
+						<li><a href="viagens.html">Praia do Capão</a></li>
+						<li><a href="viagens.html">Serra do Cipó</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Contato</h4>
+					<ul>
+						<li><a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp da equipe</a></li>
+						<li><a href="https://instagram.com/jhon_nytur" target="_blank" rel="noopener">@jhon_nytur</a></li>
+						<li>São Paulo • SP</li>
+						<li>Todos os dias, 8h às 20h</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<span>© 2026 Jhonnytur. Todos os direitos reservados.</span>
+				<span>Site demonstrativo para apresentação comercial.</span>
+			</div>
+		</div>
+	</footer>
+
+	<button class="to-top" type="button" aria-label="Voltar ao topo">↑</button>
+	<a class="wa" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="Falar com a Jhonnytur pelo WhatsApp">
+		<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.5 4.1 1.5 5.9L.1 24l6.4-1.7a12 12 0 0 0 5.6 1.4h.1c6.6 0 11.8-5.3 11.8-11.9 0-3.2-1.3-6.1-3.5-8.3ZM12.2 21.7h-.1c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.6 4.7Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.9-1.7.1-.2 0-.4 0-.5 0-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.7 0 1.6 1.1 3.1 1.3 3.3.2.2 2.2 3.4 5.4 4.7 2 .9 2.8.9 3.8.8.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z" fill="currentColor"/></svg>
+	</a>
+</body>
+</html>

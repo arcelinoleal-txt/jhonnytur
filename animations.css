@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Jhonnytur — camada de animação
+   Revelações ao rolar, cortina entre páginas e micro-interações.
+   ========================================================================== */
+
+/* ---------------------------------------------------------- revelações */
+/* Só ficam ocultas quando o JS está ativo (classe .js no <html>). */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .9s var(--ease), transform .9s var(--ease);
+  transition-delay: var(--d, 0s);
+  will-change: opacity, transform;
+}
+.reveal.is-in { opacity: 1; transform: none; }
+
+.js .reveal-group > * {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .8s var(--ease), transform .8s var(--ease);
+}
+.reveal-group.is-in > * { opacity: 1; transform: none; }
+.reveal-group.is-in > *:nth-child(1) { transition-delay: .05s; }
+.reveal-group.is-in > *:nth-child(2) { transition-delay: .15s; }
+.reveal-group.is-in > *:nth-child(3) { transition-delay: .25s; }
+.reveal-group.is-in > *:nth-child(4) { transition-delay: .35s; }
+.reveal-group.is-in > *:nth-child(5) { transition-delay: .45s; }
+.reveal-group.is-in > *:nth-child(6) { transition-delay: .55s; }
+.reveal-group.is-in > *:nth-child(7) { transition-delay: .65s; }
+.reveal-group.is-in > *:nth-child(8) { transition-delay: .75s; }
+.reveal-group.is-in > *:nth-child(9) { transition-delay: .85s; }
+
+.js .reveal-x { opacity: 0; transform: translateX(-40px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s); }
+.reveal-x.is-in { opacity: 1; transform: none; }
+
+.js .reveal-scale { opacity: 0; transform: scale(.94); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s); }
+.reveal-scale.is-in { opacity: 1; transform: none; }
+
+/* entrada suave da página */
+@keyframes page-in { from { opacity: 0; } to { opacity: 1; } }
+body { animation: page-in .5s ease both; }
+
+/* ------------------------------------------------- cortina entre páginas */
+.page-wipe {
+  position: fixed;
+  z-index: 200;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(100deg, var(--navy) 0 74%, var(--gold) 74% 100%);
+  transform: translateX(101%);
+}
+.page-wipe.is-out { animation: curtain-out .7s var(--ease) both; }
+.page-wipe.is-in { animation: curtain-in .4s var(--ease) forwards; }
+@keyframes curtain-in { from { transform: translateX(-101%); } to { transform: translateX(0); } }
+@keyframes curtain-out { from { transform: translateX(0); } to { transform: translateX(101%); } }
+
+body.is-leaving { opacity: .96; transition: opacity .3s ease; }
+
+/* -------------------------------------------------------------- estados */
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal, .js .reveal-x, .js .reveal-scale, .js .reveal-group > * { opacity: 1 !important; transform: none !important; }
+  .page-wipe { display: none; }
+  .hero-media img { animation: none; }
+}
